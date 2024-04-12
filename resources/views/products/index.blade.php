@@ -11,6 +11,7 @@
                 <th>S.No</th>
                 <th>Name</th>
                 <th>Image</th>
+                <th>Upload Images</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -24,7 +25,9 @@
                 <td>
                     <!-- <img src="products/{{$product->image}}" class="rounded-circle" width="50" height="50" /> -->
                     <img src="{{ Str::startsWith($product->image, 'http') ? $product->image : asset('products/' . $product->image) }}" class="rounded-circle" width="50" height="50" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <!-- <a href="{{url('/'.$product->id.'/upload')}}" class="btn btn-info">Add/View Images</a> -->
+                </td>
+                <td>
+                    <a href="{{url('products/'.$product->id.'/upload')}}" class="btn btn-info">Add/View Images</a>
                 </td>
                 <td>
                     <a href="products/{{$product->id}}/edit" class="btn btn-dark btn-sm">Edit</a>
