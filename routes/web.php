@@ -24,8 +24,9 @@ Route::delete('products/{id}/delete', [ProductController::class, 'destroy'])->na
 Route::get('products/{id}/show', [ProductController::class, 'show'])->name('products.show');
 
 
-// Route::get('/{productId}/upload', [ProductImageController::class, 'index']);
-// Route::post('/{productId}/upload', [ProductImageController::class, 'store']);
+Route::get('products/{productId}/upload', [ProductImageController::class, 'index']);
+Route::post('products/{productId}/upload', [ProductImageController::class, 'store']);
+Route::get('product-image/{productImageId}/delete', [ProductImageController::class, 'destroy']);
 
 
 
